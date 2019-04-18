@@ -1,4 +1,4 @@
-## Angular Todo App
+## Angular To Do App
 
 This project was generated with Angular CLI version 1.0.0.
 
@@ -11,7 +11,7 @@ Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will 
 Run ng build to build the project. 
 
 ## Further help
-To get more help on the Angular CLI use ng help or go check out the Angular CLI README.
+To get more help on the Angular CLI use ng help or go check out the [Angular CLI README](https://github.com/angular/angular-cli#installation)
 
 ## How it works
 
