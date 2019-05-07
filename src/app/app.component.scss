@@ -1,0 +1,174 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+$text: #fff;
+$font: "Open Sans";
+$size: 16px;
+
+$btn: #5FBDA8; /* cyan*/
+$base: #1E3354; /* blue*/
+/* $bg_list: #52424A // violet*/
+
+$bg_none: rgba(255, 255, 255, 0);
+$shadow: rgba(0, 0, 0, .3);
+$input_box: #32343c;
+
+$check_box: darken($text, 20%);
+$padding_check: 30px;
+$size_check: 15px;
+$size_checked: $size_check;
+
+// mixin
+
+@mixin hover {
+	-webkit-box-shadow: 0 70px 70px -35px $shadow;
+	-moz-box-shadow: 0 70px 70px -35px $shadow;
+	box-shadow: 0 70px 70px -35px $shadow;
+	-webkit-transition: all.4s ease-in;
+	-o-transition: all.4s ease-in;
+	-moz-transition: all.4s ease-in;
+	transition: all.4s ease-in;
+}
+
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-o-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}
+
+@mixin box-shadow($box-shadow) {
+	-webkit-box-shadow: $box-shadow;
+	-moz-box-shadow: $box-shadow;
+	box-shadow: $box-shadow;
+}
+
+
+// end mixin
+
+* {
+	@include box-sizing;
+}
+
+
+#toDoList {
+	position: relative;
+	width: 500px;
+	padding: 0 40px;
+	margin: auto;
+	margin-top: 55px;
+	color: $text;
+	background: $bg_none;
+	@include box-shadow(0 10px 30px $shadow);
+	@include transform(translate3d(0, 0, 0));
+	@include transition(all.4s ease-out);
+
+	&:hover {
+		@include hover;
+		@include transform(translate3d(0, 0, 0));
+	}
+}
+
+form{
+  max-width: 30em;
+  margin: 4em auto;
+  position: relative;
+  padding: 2em 3em;
+  overflow: hidden;
+}
+form h1{
+  font-family: "Raleway";
+  color:#fff;
+  margin-bottom: 20px
+}
+form input[type=text]::placeholder{
+  font-family: "Raleway";
+  color:#666;
+}
+form .data{
+  margin-top: 1em;
+}
+form .data li{
+  background: #fff;
+  border-left: 4px solid #F97300;
+  padding: 1em;
+  margin: 1em auto;
+  color: #666;
+  font-family: "Raleway";
+}
+form .data li i{
+  float: right;
+  color: #888;
+  cursor: pointer;
+}
+form .input-group-text{
+  background: #F97300;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  padding: 1em 23px;
+  color: #fff;
+  position: absolute;
+  right: 13px;
+  top: 68px;
+  cursor: pointer;
+}
+form .input-group-text i{
+  font-size: 2em;
+}
+form .form-control{
+  height: 3em;
+  font-family: "Raleway";
+}
+form .form-control:focus{
+  box-shadow: 0;
+}
+.button__holder{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: -16px;
+  &:after{
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0; right: 0; bottom: 0; left: 0;
+  }
+}
+.plus{
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  background: #ed1c5b;
+  border-radius: 50%;
+  border: none;
+  transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 200ms cubic-bezier(.2,0,.7,1);
+  &:after{
+      content: "+";
+      font-size: 3em;
+      line-height: .7em;
+  }
+  &:hover{
+      transform: rotate(90deg);
+      box-shadow: 0 0 1px 15px rgba(#8A3B58, 0.4),
+      0 0 1px 30px rgba(#8A3B58, 0.1),
+      0 0 1px 45px rgba(#8A3B58, 0.1);
+      
+  }
+}

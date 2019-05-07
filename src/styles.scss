@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+$btn: #5FBDA8; /* cyan*/
+$base: #1E3354; /* blue*/
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+    background: linear-gradient($btn, $base); 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($btn), to($base));
+	background: -webkit-linear-gradient(top, $btn, $base); 
+	background: -moz-linear-gradient(top, $btn, $base);
+	background: -o-linear-gradient(top, $btn, $base);
+    
+}
