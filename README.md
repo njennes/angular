@@ -2,12 +2,14 @@
 
 This app project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
-(http://njennes.com/images/todo-app.jpg)
+![APP Screenshot](http://njennes.com/images/todo-app.jpg)
 
 ## Install NPM and SASS
 
 Go to project folder and install dependencies:
+
 `npm install`
+
 `npm install node-sass`
 
 ## Development server
